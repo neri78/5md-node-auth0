@@ -13,22 +13,12 @@ app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
-// TODO: import express-openid-connect package
-const { auth } = require('express-openid-connect');
 
 // base url + port
 const port = process.env.PORT || 3000;
 const baseURL = process.env.BASE_URL;
 
-// TODO: add a config object for authentication Settings - authRequired, auth0Logout, baseURL
-const config = {
-  authRequired : false,
-  auth0Logout: true,
-  baseURL: `${baseURL}:${port}`
-}
 
-// TODO: register auth middleware to the app
-app.use(auth(config));
 
 app.use(function (req, res, next) {
   res.locals.user = req.oidc ? req.oidc.user : undefined;
