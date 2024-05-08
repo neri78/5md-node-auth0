@@ -9,7 +9,7 @@ The goals are:
 - Storytelling - __“Yes, I need to use THIS.”__ 
 - Provide the next step for CTA.
 
-The demo is also based on the following resources:
+The demo is based on the following resources:
 
 - [GitHub - auth0-samples/auth0-express-webapp-sample](https://github.com/auth0-samples/auth0-express-webapp-sample)
 - [YouTube - Add Node.js User Authentication in 10 Minutes!](https://www.youtube.com/watch?v=QQwo4E_B0y8)
