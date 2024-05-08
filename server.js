@@ -16,7 +16,8 @@ app.use(express.json());
 
 // base url + port
 const port = process.env.PORT || 3000;
-const baseURL = process.env.BASE_URL;
+const baseURL = `${process.env.BASE_URL}:${port}`;
+
 
 
 
