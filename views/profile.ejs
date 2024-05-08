@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+
+  <% if (locals.user) { %>
+    <h1 class="text-4xl mb-4">Welcome <%= user.nickname %></h1>
+
+    <% if (user.picture) { %>
+      <img class="block py-3" src="<%= user.picture %>" width="300">
+    <% } %>
+    
+    <pre class="block bg-black p-4 text-base text-white w-3/4 text-wrap overflow-scroll"><%= userProfile %></pre>
+  <% } else { %>
+    <H1 class="text-4xl mb-4">🛑 This is a private area; you are not supposed to see this page without being authenticated.</H1>
+  <% } %>
+<%- include('partials/footer') -%>
