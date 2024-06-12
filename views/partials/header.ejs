@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        <%= locals.title || "Authentication in 5 minutes with Auth0" %>
+        <%= locals.title || "Auth0を利用し認証、認可機能を素早く実装" %>
     </title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
     <link rel="shortcut icon" href="https://cdn.auth0.com/website/website/favicons/auth0-favicon.svg">
@@ -26,16 +26,16 @@
             </div>
             <div>
                 <a href="/profile"
-                class="block font-semibold text-6xl lg:text-xl tracking-tight mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">Profile</a>
+                class="block font-semibold text-6xl lg:text-xl tracking-tight mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white mr-4">プロファイル</a>
                 <% if (locals.user) { %>                    
                         <a href="/logout"
                         class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">
-                            <span class="font-semibold text-6xl lg:text-xl tracking-tight">Log Out</span>
+                            <span class="font-semibold text-6xl lg:text-xl tracking-tight">ログアウト</span>
                         </a>     
                     <% } else { %>
                         <a href="/login"
                         class="inline-block  text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0">
-                            <span class="font-semibold text-6xl lg:text-xl tracking-tight">Log In</span>
+                            <span class="font-semibold text-6xl lg:text-xl tracking-tight">ログイン</span>
                         </a>
                     <% } %>
                 

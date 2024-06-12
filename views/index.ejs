@@ -1,15 +1,15 @@
 <%- include('partials/header') -%>
 
-    <h1 class="text-6xl lg:text-4xl">Welcome to Auth0 by Okta Demo!</h1>
+    <h1 class="text-6xl lg:text-4xl">Auth0 by Oktaデモへようこそ！</h1>
 
     <% if (locals.user) { %>
-        <p class="lg:text-lg text-4xl">You are logged in. <a href="/profile" class="underline text-4xl lg:text-lg">Open profile page.</a>
+        <p class="lg:text-lg text-4xl">現在ログインしています。<a href="/profile" class="underline text-4xl lg:text-lg">プロファイルページ</a>
         </p>
 
         <div class="justify-center" style="margin: 50px;">
             <div class="container mx-auto" style="text-align: center !important;" >
                 
-                <p class="lg:text-4xl text-4xl text-white">Try Auth0 by Okta for FREE!
+                <p class="lg:text-4xl text-4xl text-white">Auth0 by Oktaを無料で体験！
                 </p>
                 <img class="w-1/3" style="margin:auto; display: block;" src="images/QRCode-JP.png" />
                                 
@@ -18,7 +18,7 @@
         </div>
 
     <% } else { %>
-        <p class="lg:text-lg text-4xl">You are not logged in. <a href="/login" class="underline text-4xl lg:text-lg">Log in</a>
+        <p class="lg:text-lg text-4xl">現在ログインしていません。<a href="/login" class="underline text-4xl lg:text-lg">こちら</a>からログイン
         </p>
 
     <% } %>
