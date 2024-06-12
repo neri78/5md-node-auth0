@@ -4,7 +4,7 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const router = require('./routes/index');
-
+const { auth } = require('express-openid-connect');
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -18,8 +18,13 @@ app.use(express.json());
 const port = process.env.PORT || 3000;
 const baseURL = `${process.env.BASE_URL}:${port}`;
 
+const config = {
+  authRequired : false,
+  baseURL: baseURL, 
+  idpLogout: true
+};
 
-
+app.use(auth(config));
 
 app.use(function (req, res, next) {
   res.locals.user = req.oidc ? req.oidc.user : undefined;
